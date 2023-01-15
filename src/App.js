@@ -22,7 +22,7 @@ import HomeTemplate from './templates/HomeTemplate/HomeTemplate';
 import UserTemplate from './templates/UserTemplate/UserTemplate';
 import AdminHomeTemplate from './templates/AdminHomeTemplate/AdminHomeTemplate';
 import AdminHome from './pages/Home/AdminHome/AdminHome';
-
+import UserMentor from './pages/Home/UserHome/UserMentor';
 
 function App() {
 
@@ -44,6 +44,7 @@ function App() {
 
         {/*User*/}
         <Route path='/userhome' element={<HomeTemplate Component={UserHome} />} />
+        <Route path='/usermentor' element={<HomeTemplate Component={UserMentor} />} />
         <Route path='/userprofile/:id' element={<HomeTemplate Component={UserProfile} />} />
         <Route path='/userrequest/:id' element={<HomeTemplate Component={UserRequest} />} />
 
