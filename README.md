@@ -1,11 +1,3 @@
-# Còn lại
-Múa xong đống request, cần thì hú tui điền fake data hộ tiếp nghen
-Hiện chưa thấy vấn đề gì thêm (còn tham vọng lắm mà dẹp đi huhu, múa trên clip được). Mà ông thấy gì hú hén, tui bay lắc nhưng làm kịp hết hen. Sống khỏe, sống dui.
-
-
-
-
-
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
