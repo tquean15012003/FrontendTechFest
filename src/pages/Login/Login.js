@@ -70,6 +70,7 @@ export default function Login() {
                 <option className="bg-transparent outline-hidden" value="user">User</option>
                 <option className="bg-transparent outline-hidden" value="company">Company</option>
                 <option className="bg-transparent outline-hidden" value="admin">Admin</option>
+                <option className="bg-transparent outline-hidden" value="mentor">Mentor</option>
               </select>
               {formik.touched.type && formik.errors.type ? (<div className="text-red-400"> {formik.errors.type}</div>) : null}
             </div>

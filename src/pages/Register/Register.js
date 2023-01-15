@@ -5,6 +5,7 @@ import * as Yup from 'yup';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { signUpAction } from '../../redux/actions/LogInAction';
+import logo from '../../assets/images/logo.png'
 
 export default function Register() {
 
@@ -45,8 +46,9 @@ export default function Register() {
     <form className="w-full h-full" onSubmit={formik.handleSubmit}>
       <section className="text-gray-600 body-font h-full w-full">
         <div className="h-full w-full container mx-auto flex px-5 justify-between items-center">
-          <div className="lg:w-2/5 rounded-lg px-8 flex flex-col place-self-center border-r-2 border-black">
-
+          <div className="lg:w-2/5 rounded-lg px-8 flex flex-col place-self-center">
+            <img className='scale-150' src={logo} alt="logo" />
+            <p className="text-2xl text-white font-bold">BOOST YOUR CAREER WITH CONNTECH</p>
           </div>
 
           <div style={{ width: "1px" }} className='bg-white h-2/3 opacity-50'>
@@ -57,40 +59,41 @@ export default function Register() {
             <h1 className="text-3xl text-white font-bold mb-8">SIGN UP TO CONNTECH!</h1>
             {/* Sign Up */}
             <div className="relative mb-4">
-            <label htmlFor="username" className="text-white leading-6 text-2xl font-bold">USERNAME</label>
-              <input style={{borderColor: "#8e6ebf"}} onChange={formik.handleChange} value={formik.values.username} onBlur={formik.handleBlur} type="username" id="username" name="username" className="border-b placeholder-white/50 w-full text-white text-xl !bg-transparent outline-none py-1 leading-8 transition-colors duration-200 ease-in-out" />
-              {formik.touched.username && formik.errors.username ? (<div className="text-red-900"> {formik.errors.username}</div>) : null}
+              <label htmlFor="username" className="text-white leading-6 text-2xl font-bold">USERNAME</label>
+              <input placeholder="username" style={{ borderColor: "#8e6ebf" }} onChange={formik.handleChange} value={formik.values.username} onBlur={formik.handleBlur} type="username" id="username" name="username" className="border-b placeholder-white/50 w-full text-white text-xl !bg-transparent outline-none py-1 leading-8 transition-colors duration-200 ease-in-out" />
+              {formik.touched.username && formik.errors.username ? (<div className="text-red-400"> {formik.errors.username}</div>) : null}
             </div>
             <div className="relative mb-4">
-            <label htmlFor="password" className="text-white leading-6 text-2xl font-bold">PASSWORD</label>
-              <input style={{borderColor: "#8e6ebf"}} onChange={formik.handleChange} value={formik.values.password} onBlur={formik.handleBlur} type="password" id="password" name="password" className="border-b placeholder-white/50 w-full text-white text-xl !bg-transparent outline-none py-1 leading-8 transition-colors duration-200 ease-in-out" />
-              {formik.touched.password && formik.errors.password ? (<div className="text-red-900"> {formik.errors.password}</div>) : null}
+              <label htmlFor="password" className="text-white leading-6 text-2xl font-bold">PASSWORD</label>
+              <input placeholder="*********" style={{ borderColor: "#8e6ebf" }} onChange={formik.handleChange} value={formik.values.password} onBlur={formik.handleBlur} type="password" id="password" name="password" className="border-b placeholder-white/50 w-full text-white text-xl !bg-transparent outline-none py-1 leading-8 transition-colors duration-200 ease-in-out" />
+              {formik.touched.password && formik.errors.password ? (<div className="text-red-400"> {formik.errors.password}</div>) : null}
             </div>
             <div className="relative mb-4">
               <label htmlFor="passwordConfirmation" className="text-white leading-6 text-2xl font-bold">PASSWORD CONFIRMATION</label>
-              <input style={{borderColor: "#8e6ebf"}} onChange={formik.handleChange} value={formik.values.passwordConfirmation} onBlur={formik.handleBlur} type="password" id="passwordConfirmation" name="passwordConfirmation" className="border-b placeholder-white/50 w-full text-white text-xl !bg-transparent outline-none py-1 leading-8 transition-colors duration-200 ease-in-out" />
-              {formik.touched.passwordConfirmation && formik.errors.passwordConfirmation ? (<div className="text-red-900"> {formik.errors.passwordConfirmation}</div>) : null}
+              <input placeholder="*********" style={{ borderColor: "#8e6ebf" }} onChange={formik.handleChange} value={formik.values.passwordConfirmation} onBlur={formik.handleBlur} type="password" id="passwordConfirmation" name="passwordConfirmation" className="border-b placeholder-white/50 w-full text-white text-xl !bg-transparent outline-none py-1 leading-8 transition-colors duration-200 ease-in-out" />
+              {formik.touched.passwordConfirmation && formik.errors.passwordConfirmation ? (<div className="text-red-400"> {formik.errors.passwordConfirmation}</div>) : null}
             </div>
             <div className="relative mb-4">
               <label htmlFor="type" className="text-white leading-6 text-2xl font-bold">DOMAIN</label>
-              <select style={{borderColor: "#8e6ebf"}} onChange={formik.handleChange} value={formik.values.type} onBlur={formik.handleBlur} name="type" id="type" className="mt-2 border-b placeholder-white/50 w-full text-white text-xl !bg-transparent outline-none py-1 leading-8 transition-colors duration-200 ease-in-out">
+              <select style={{ borderColor: "#8e6ebf" }} onChange={formik.handleChange} value={formik.values.type} onBlur={formik.handleBlur} name="type" id="type" className="mt-2 border-b placeholder-white/50 w-full text-white text-xl !bg-transparent outline-none py-1 leading-8 transition-colors duration-200 ease-in-out">
                 <option value="user">User</option>
                 <option value="company">Company</option>
                 <option value="admin">Admin</option>
+                <option value="mentor">Mentor</option>
               </select>
-              {formik.touched.type && formik.errors.type ? (<div className="text-red-900"> {formik.errors.type}</div>) : null}
+              {formik.touched.type && formik.errors.type ? (<div className="text-red-400"> {formik.errors.type}</div>) : null}
             </div>
             <div className="relative mb-4">
               <label htmlFor="name" className="text-white leading-6 text-2xl font-bold">Name</label>
-              <input style={{borderColor: "#8e6ebf"}} onChange={formik.handleChange} value={formik.values.name} onBlur={formik.handleBlur} type="name" id="name" name="name" className="border-b placeholder-white/50 w-full text-white text-xl !bg-transparent outline-none py-1 leading-8 transition-colors duration-200 ease-in-out" />
-              {formik.touched.name && formik.errors.name ? (<div className="text-red-900"> {formik.errors.name}</div>) : null}
+              <input placeholder="Harry Tran" style={{ borderColor: "#8e6ebf" }} onChange={formik.handleChange} value={formik.values.name} onBlur={formik.handleBlur} type="name" id="name" name="name" className="border-b placeholder-white/50 w-full text-white text-xl !bg-transparent outline-none py-1 leading-8 transition-colors duration-200 ease-in-out" />
+              {formik.touched.name && formik.errors.name ? (<div className="text-red-400"> {formik.errors.name}</div>) : null}
             </div>
-            <button type="submit" className="text-white border-0 py-2 px-8 focus:outline-none rounded-2xl text-xl font-bold" style={{backgroundColor: "#8e6ebf"}}>Sign up</button>
+            <button type="submit" className="text-white border-0 py-2 px-8 focus:outline-none rounded-2xl text-xl font-bold" style={{ backgroundColor: "#8e6ebf" }}>Sign up</button>
             {/*Back To Log in*/}
-            <p  className="text-xl text-gray-500 mt-3 mb-2 text-center"><i>Already have an account? </i><b onClick={() => {
+            <p className="text-xl text-gray-500 mt-3 mb-2 text-center"><i>Already have an account? </i><b onClick={() => {
               navigate("/login", { replace: false })
             }} className="text-white cursor-pointer">Sign in</b></p>
-            
+
           </div>
         </div>
       </section>
