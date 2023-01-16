@@ -1,3 +1,8 @@
+# ConnTech - (slogan)
+
+This repository contains codes for ConnTech, a job-search platform that   . This is a project for the TechFest Hackaton 2023 hosted by School of Computer Science and Engineering (SCSE).
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
